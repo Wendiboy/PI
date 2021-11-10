@@ -1,0 +1,26 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+li{
+    margin-top: 10px;
+    font-size: 21px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.Sidebar{
+    width: 10vw;
+    min-width: 150px;
+    height: 100%;
+    min-height: 80vh;
+    background-color: turquoise;
+    padding: 20px;
+    border-radius: 20px;
+    position: sticky;
+    top: 110px;
+    
+}
+
