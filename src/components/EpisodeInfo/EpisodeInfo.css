@@ -1,0 +1,32 @@
+.EpisodeInfo{
+    min-width: 310px;
+    min-height: 630px;
+    width: 70vw;
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.EpisodeInfo__name{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.EpisodeInfo__characters{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 20px;
+    min-height: 170px;
+}

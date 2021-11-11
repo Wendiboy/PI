@@ -9,11 +9,7 @@ import { setEpisodes, setCurrentPage, setTotalEpisodesCount, toggleIsFetching, t
 // import { usersAPI } from '../../API/API';
 // debugger
 const MainListContainer = (props) => {
-    if (props.episodes.length === 0){
-        console.log(props.episodes.length)
-        console.log(props.episodes.length)
-        
-
+    if (props.episodes.length === 0){     
         axios.get("https://rickandmortyapi.com/api/episode").then(response => {
             props.setEpisodes(response.data.results);
             console.log(response.data.results)
