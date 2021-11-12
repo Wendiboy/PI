@@ -1,10 +1,11 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import EpisodeItem from "./EpisodeItem.jsx";
 
 const EpisodeItemContainer = (props) => {
     return(
-        <NavLink to={`/Episode/${props.episode.id}`}><EpisodeItem /></NavLink>
+        <Link className="EpisodeItemWrapper" to={`/Episode/${props.episode.id}`}><EpisodeItem  episode={props.episode}/></Link>
         // <a href={`/Episode/${props.episode.id}`}><EpisodeItem episode={props.episode}/></a>
     )
 }

@@ -1,7 +1,12 @@
+.EpisodeItemWrapper {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 .EpisodeItem{
     width: 300px;
-    min-height: 250px;
-    height: 300px;
+    min-height: 100px;
+    height: 150px;
     background-color: rgb(240, 212, 240);
     border-radius: 10px;
     margin-top: 10px;
@@ -18,13 +23,12 @@
     margin-top: 5px;
 }
 
-.EpisodeItem__pic{
+/* .EpisodeItem__pic{
     width: 100px;
     height: 100px;
     background-color: rgb(177, 177, 177);
-    border-radius: 50px;
-    
-}
+    border-radius: 50px;    
+} */
 
 .EpisodeItem__number{
     font-size: 16px;
@@ -32,14 +36,14 @@
     
 }
 
-.EpisodeItem__description{
+/* .EpisodeItem__description{
     margin-top: 5px;
     padding: 0 20px;
     text-align: left;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 
-}
+} */
 
 .EpisodeItem__date{
     margin-bottom: 5px;
