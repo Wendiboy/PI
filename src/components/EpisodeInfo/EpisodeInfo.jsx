@@ -7,12 +7,14 @@ const EpisodeInfo = (props) => {
     return(
         <div className="EpisodeInfo">
             
-            <h3 className="EpisodeInfo__name">{props.EpisodePage.name}</h3>
+            <h3 className="EpisodeInfo__name">sdfsdffs</h3>
+            {/* <h3 className="EpisodeInfo__name">{props.EpisodePage.name}</h3> */}
             <div className="EpisodeInfo__number">
-                Номер эпизода: {props.EpisodePage.number}
+                Номер эпизода: 2
+                {/* Номер эпизода: {props.EpisodePage.number} */}
             </div>
             <div className="EpisodeInfo__date">
-                Дата выхода:{props.EpisodePage.date}
+                {/* Дата выхода:{props.EpisodePage.date} */}
             </div>
             <div className="EpisodeInfo__characters">
                 <CharacterItem />

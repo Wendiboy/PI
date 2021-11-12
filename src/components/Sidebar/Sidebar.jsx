@@ -7,7 +7,7 @@ const Sidebar = () => {
         <div className='Sidebar'>
             <ul>
                 <li><NavLink to="/">Main</NavLink></li>
-                <li><NavLink to="/Episode">Episo</NavLink></li>
+                <li>season 1</li>
                 <li>season 2</li>
                 <li>season 3</li>
                 <li>season 4</li>
