@@ -6,7 +6,7 @@ const EpisodeItem = (props) => {
     
     
     return (    
-    <div className='EpisodeItem' onClick="">
+    <div className='EpisodeItem'>
         <h3 className="EpisodeItem__text">{props.episode.name}</h3>
         <div className="EpisodeItem__pic"></div>
         <div className="EpisodeItem__number">{props.episode.episode}</div>

@@ -4,7 +4,7 @@ import EpisodeItem from "./EpisodeItem.jsx";
 
 const EpisodeItemContainer = (props) => {
     return(
-        <NavLink to={`/Episode/${props.episode.id}`}><EpisodeItem key={props.key} episode={props.episode}/></NavLink>
+        <NavLink to={`/Episode/${props.episode.id}`}><EpisodeItem episode={props.episode}/></NavLink>
     )
 }
    

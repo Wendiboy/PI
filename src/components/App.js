@@ -18,18 +18,18 @@ class App extends Component {
                     <Header />
                     <Sidebar />
 
-                    <div>
+                    {/* <div> */}
                         <Routes>
                                                     
                             <Route path="/Episode" element={<EpisodeInfoContainer />}/>
                             {/* <Route path="/Episode" element={<EpisodeInfo />}/> */}
-                            <Route path="/Main" element={<MainListContainer props={store}/>}/>
+                            {/* <Route path="/Main" element={<MainListContainer props={store}/>}/> */}
                             <Route path="*" element={<MainListContainer props={store}/>}/>
-                            {/* <Route path="/Episode/:episodeId?" element={<EpisodeInfo />}/> */}
+                            <Route path="/Episode/:epId?" element={<EpisodeInfoContainer />}/>
 
                             
                         </Routes>
-                    </div>
+                    {/* </div> */}
                 </div>
         );
     }

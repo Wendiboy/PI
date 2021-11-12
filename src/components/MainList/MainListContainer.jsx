@@ -5,9 +5,6 @@ import MainList from './MainList.jsx';
 
 import { setEpisodes, setCurrentPage, setTotalEpisodesCount, toggleIsFetching, toggleFolloingProgress } from '../../redux/mainlist-reducer';
 
-// import Preloader from '../Preloader/Preloader';
-// import { usersAPI } from '../../API/API';
-// debugger
 const MainListContainer = (props) => {
     if (props.episodes.length === 0){     
         axios.get("https://rickandmortyapi.com/api/episode").then(response => {
@@ -20,7 +17,6 @@ const MainListContainer = (props) => {
             <MainList totalEpisodesCount={props.totalEpisodesCount}
                 pageSize={props.pageSize}
                 currentPage={props.currentPage}
-                // onPageChange={onPageChange}
                 episodesPage = {props.episodes}
             />
         </>
