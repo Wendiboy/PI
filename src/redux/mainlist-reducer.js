@@ -6,10 +6,9 @@ const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
 
 const initialState = {
         episodes: [],
-        pageSize: 8,
         totalEpisodesCount: 0,
         currentPage: 1,
-        isFetching: false,
+        isFetching: true,
         followinInProgress: []
 };
 

@@ -12,7 +12,8 @@ const MainList = (props) => {
 
     return (
     <div className='MainList'>
-        {EpisodesElements()}        
+        {/* {EpisodesElements()}*/}
+        
     </div>
     )
 }
