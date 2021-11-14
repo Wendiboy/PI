@@ -9,8 +9,6 @@ import { setEpisodes, setCurrentPage, setTotalEpisodesCount, toggleIsFetching, t
 import EpisodeItemContainer from './episodeItem/EpisodeItemContainer.jsx';
 
 const MainListContainer = () => {
-    console.log('render')  
-
     const dispatch = useDispatch()
     const episodes = useSelector(state => state.mainlistPage.episodes)
     const currentPage = useSelector(state => state.mainlistPage.currentPage)
@@ -18,10 +16,10 @@ const MainListContainer = () => {
     // const fetching = useSelector(state => state.mainlistPage.isFetching)
     const [fetching, setFetching] = useState(true)
 
+    let numSeason = 0
+
     useEffect(()=>{
         if (fetching){
-            console.log('fetching')
-            console.log(`https://rickandmortyapi.com/api/episode?page=`+currentPage)
             axios.get(`https://rickandmortyapi.com/api/episode?page=`+currentPage).then(response =>{
                 let newEpisodeArray = episodes
                 response.data.results.map(ep => newEpisodeArray.push(ep))          
@@ -37,23 +35,37 @@ const MainListContainer = () => {
     useEffect(()=> {
         document.addEventListener('scroll', scrollHandler)        
         return ()=>{
-            console.log('DELEEEET')
             document.removeEventListener('scroll',scrollHandler)
         }
     }, [fetching])
 
 
     const scrollHandler = (e) => {   
-        console.log('scroll')
         if ((e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100) && (episodes.length < totalCount)){
-            console.log('op')
             setFetching(true)
         }
     }
 
     return(
-        <div className="MainList">
-            {episodes.map(episode => <EpisodeItemContainer episode={episode} key={episode.id}/>)}
+        <div className="MainList">        
+            
+            {episodes.map(episode => {
+                if (numSeason == episode.episode[2]){
+                    return(
+                    <EpisodeItemContainer episode={episode} key={episode.id}/>)
+                } else{
+                    numSeason = numSeason + 1;
+                    return (
+                        <>
+                            <div className='season_text'>season {numSeason}</div>
+                            <EpisodeItemContainer episode={episode} key={episode.id}/>
+                        </>
+                    )
+                }
+                
+            } )}
+            
+            
         </div>
     )
 
