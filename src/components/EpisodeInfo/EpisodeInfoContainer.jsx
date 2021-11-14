@@ -33,8 +33,9 @@ const EpisodeInfoContainer =(props) => {
                 Номер эпизода: {EpisodeNumber}
             </div>
             <div className="EpisodeInfo__date">
-                Дата выхода:{EpisodeDate}
+                Дата выхода: {EpisodeDate}
             </div>
+            <div className="EpisodeInfo__text">Characters</div>
             <div className="EpisodeInfo__characters">                
                 {characterElements()}
             </div>

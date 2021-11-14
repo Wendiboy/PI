@@ -15,6 +15,7 @@ h1 {
 .App__wrapper{
     background-color: #eeeeee;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 
     display: flex;
     flex-wrap: wrap;
